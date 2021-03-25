@@ -1,7 +1,0 @@
-- hosts: all
-  tasks:
-    - name: Restart service httpd, in all cases
-      service:
-        name: httpd
-        state: restarted
-
