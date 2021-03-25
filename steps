@@ -1,0 +1,18 @@
+step 1:
+ - Create inventory, credential, project and template in Tower
+   Make it work from tower itself as 'admin' user
+
+step 2:
+ - Make it work from an unprivileged account 'nagios' in Tower
+
+step 3: 
+ - install awx cli on nagios server itself:
+   https://access.redhat.com/solutions/4971631
+     ( the repo will change for RHEL8   ansible-tower-cli-el8.repo )
+
+ - generate token for the unprivileged user 'nagios'
+   curl -XPOST -k -H "Content-type: application/json" -d '{"description":"Pers
+onal Tower CLI token", "application":null, "scope":"write"}' https://nagiosuser:Xswxsw232@192.168.0.23/api/v2/users/
+2/personal_tokens/  | python -m json.tool
+
+ - change the restart_http service to restart for splunk.service

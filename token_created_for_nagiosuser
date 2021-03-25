@@ -1,0 +1,31 @@
+[dleroux@station1 publictools (main %)]$ curl -XPOST -k -H "Content-type: application/json" -d '{"description":"Personal Tower CLI token", "application":null, "scope":"write"}' https://nagiosuser:Xswxsw232@192.168.0.23/api/v2/users/2/personal_tokens/  | python -m json.tool
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   603  100   524  100    79   1368    206 --:--:-- --:--:-- --:--:--  1574
+{
+    "id": 3,
+    "type": "o_auth2_access_token",
+    "url": "/api/v2/tokens/3/",
+    "related": {
+        "user": "/api/v2/users/3/",
+        "activity_stream": "/api/v2/tokens/3/activity_stream/"
+    },
+    "summary_fields": {
+        "user": {
+            "id": 3,
+            "username": "nagiosuser",
+            "first_name": "nagiosuser",
+            "last_name": ""
+        }
+    },
+    "created": "2021-03-25T14:44:47.239144Z",
+    "modified": "2021-03-25T14:44:47.247618Z",
+    "description": "Personal Tower CLI token",
+    "user": 3,
+    "token": "LOI4raOPlpRYVuT6xCIpsCYjBArr49",
+    "refresh_token": null,
+    "application": null,
+    "expires": "3020-07-26T14:44:47.235499Z",
+    "scope": "write"
+}
+
