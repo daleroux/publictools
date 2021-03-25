@@ -1,7 +1,7 @@
 - hosts: all
   become: true
-  vars:
-    service2restart: httpd
+  vars_files:
+    - vars/restart.yml
   tasks:
     - name: Restart service "{{ service2restart }}" in all cases
       service:
