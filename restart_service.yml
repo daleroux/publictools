@@ -1,8 +1,9 @@
 - hosts: all
+  become: true
   vars:
     service2restart: httpd
   tasks:
-    - name: Restart service httpd, in all cases
+    - name: Restart service "{{ service2restart }}" in all cases
       service:
         name: "{{ service2restart }}"
         state: restarted
